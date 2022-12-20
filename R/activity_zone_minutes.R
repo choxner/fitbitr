@@ -35,10 +35,10 @@ get_azm_time_series <- function(token, date="", period="", base_date="", end_dat
 
 
 
-#' @title Get Activity Intraday Time Series
+#' @title Get AZM Intraday Time Series
 #'
 #' @description
-#'   \code{get_activity_intraday_time_series()} returns intraday time series data in the specified range for a given resource.
+#'   \code{get_AZM_intraday_time_series()} returns intraday time series data in the specified range for a given resource.
 #'   Access to the Intraday Time Series for personal use (accessing your own data) is available through the "Personal" App Type.
 #'
 #' @inheritParams inheritparams_token
