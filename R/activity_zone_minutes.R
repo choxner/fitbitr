@@ -70,5 +70,11 @@ get_azm_intraday_time_series <- function(token, date, detail_level="15min", star
   } else{
     paste0(url_active_zone_minutes, sprintf("date/%s/1d/%s.json", date, detail_level))
   }
-  tidy_output(get(url, token), simplify)
+
+  content <- get(url, token)
+  if(simplify){
+    content$`activities-heart-intraday`$dataset
+  } else{
+    content
+  }
 }
