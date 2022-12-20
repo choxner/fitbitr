@@ -31,8 +31,8 @@ get_azm_time_series <- function(token, date="", period="", base_date="", end_dat
     stop("Error: Need to enter combination of date/period or base_date/end_date")
   }
 
-  print(url)
-  console.log(url)
+  stop(url)
+#   console.log(url)
   tidy_output(get(url, token), simplify)
 }
 
