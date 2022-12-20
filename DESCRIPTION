@@ -25,6 +25,7 @@ Collate:
     'common.R'
     'fitbitr.R'
     'activity.R'
+    'activity_zone_minutes.R'
     'body_weight.R'
     'device.R'
     'heart-rate.R'
