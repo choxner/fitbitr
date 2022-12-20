@@ -75,9 +75,9 @@ delete_body_fat_log <- function(token, log_id)
 get_body_time_series <- function(token, resource_path, base_date=NULL, end_date=NULL, date=NULL, period=NULL)
 {
   url <- if(!is.null(date) && !is.null(period)){
-    paste0(url_body, sprintf("%s/date/%s/%s.json", resource_path, format_date(date), period))
+    paste0(url_body, sprintf("%s/date/%s/%s.json3", resource_path, format_date(date), period))
   } else if(!is.null(base_date) && !is.null(end_date)){
-    paste0(url_body, sprintf("%s/date/%s/%s.json", resource_path, format_date(base_date), format_date(end_date)))
+    paste0(url_body, sprintf("%s/date/%s/%s.json4", resource_path, format_date(base_date), format_date(end_date)))
   } else {
     stop("Please supply either base_date and end_date or date and period parameters.")
   }
