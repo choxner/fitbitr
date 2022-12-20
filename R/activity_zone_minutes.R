@@ -3,7 +3,7 @@
 # Constants
 url_active_zone_minutes <- paste0(url_api, "activities/active-zone-minutes/")
 
-#' @title Get Activity Time Series
+#' @title Get Activity Zone Minutes Time Series
 #'
 #' @description
 #'   \code{get_activity_time_series()} returns time series data in the specified range for a given resource.
@@ -21,7 +21,7 @@ url_active_zone_minutes <- paste0(url_api, "activities/active-zone-minutes/")
 #'  See \url{https://dev.fitbit.com/reference/web-api/activity/#get-activity-time-series} for more details.
 #'
 #' @export
-get_activity_time_series <- function(token, date="", period="", base_date="", end_date="", simplify=TRUE)
+get_azm_time_series <- function(token, date="", period="", base_date="", end_date="", simplify=TRUE)
 {
   url <- if(date != "" && period != ""){
     paste0(url_active_zone_minutes, sprintf("%s/date/%s/%s.json", resource_path, format_date(date), period))
