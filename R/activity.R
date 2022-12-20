@@ -85,9 +85,9 @@ get_activity_log <- function(token, date = Sys.Date(), simplify=TRUE)
 get_activity_time_series <- function(token, resource_path, date="", period="", base_date="", end_date="", simplify=TRUE)
 {
   url <- if(date != "" && period != ""){
-    paste0(url_activity, sprintf("%s/date/%s/%s.json", resource_path, format_date(date), period))
+    paste0(url_activity, sprintf("%s/date/%s/%s.json1", resource_path, format_date(date), period))
   } else if(base_date != "" & end_date != ""){
-    paste0(url_activity, sprintf("%s/date/%s/%s.json", resource_path, format_date(base_date), format_date(end_date)))
+    paste0(url_activity, sprintf("%s/date/%s/%s.json2", resource_path, format_date(base_date), format_date(end_date)))
   } else{
     stop("Error: Need to enter combination of date/period or base_date/end_date")
   }
