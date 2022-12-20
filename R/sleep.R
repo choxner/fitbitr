@@ -105,9 +105,9 @@ sleep_goal <- function(token, min_duration=NULL)
 get_sleep_time_series <- function(token, resource_path, date="", period="", base_date="", end_date="")
 {
   url <- if(date != "" && period != ""){
-    paste0(url_sleep, sprintf("%s/date/%s/%s.json5", resource_path, format_date(date), period))
+    paste0(url_sleep, sprintf("%s/date/%s/%s.json", resource_path, format_date(date), period))
   } else if(base_date != "" & end_date != ""){
-    paste0(url_sleep, sprintf("%s/date/%s/%s.json6", resource_path, format_date(base_date), format_date(end_date)))
+    paste0(url_sleep, sprintf("%s/date/%s/%s.json", resource_path, format_date(base_date), format_date(end_date)))
   }
   get(url, token)[[1]]
 }

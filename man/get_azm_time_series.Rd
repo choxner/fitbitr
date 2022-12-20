@@ -2,7 +2,7 @@
 % Please edit documentation in R/activity.R
 \name{get_azm_time_series}
 \alias{get_azm_time_series}
-\title{Get azm Time Series}
+\title{Get AZM Time Series}
 \usage{
 get_azm_time_series(token, date = "", period = "",
   base_date = "", end_date = "", simplify = TRUE)
@@ -26,5 +26,5 @@ get_azm_time_series(token, date = "", period = "",
 \details{
 Add details here 
 
- See \url{https://dev.fitbit.com/reference/web-api/activity/#get-activity-time-series} for more details.
+ See \url{https://dev.fitbit.com/build/reference/web-api/active-zone-minutes-timeseries-series} for more details.
 }
