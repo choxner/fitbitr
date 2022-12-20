@@ -63,9 +63,9 @@ get_azm_intraday_time_series <- function(token, date, detail_level="15min", star
     } else{
       date2 <- as.Date(date) + 1
     }
-    paste0(url_activity, sprintf("date/%s/%s/%s/time/%s/%s.json", date, date2, detail_level, start_time, end_time))
+    paste0(url_active_zone_minutes, sprintf("date/%s/%s/%s/time/%s/%s.json", date, date2, detail_level, start_time, end_time))
   } else{
-    paste0(url_activity, sprintf("date/%s/1d/%s.json", date, detail_level))
+    paste0(url_active_zone_minutes, sprintf("date/%s/1d/%s.json", date, detail_level))
   }
   tidy_output(get(url, token), simplify)
 }
