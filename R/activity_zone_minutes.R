@@ -24,9 +24,9 @@ url_active_zone_minutes <- paste0(url_api, "activities/active-zone-minutes/")
 get_azm_time_series <- function(token, date="", period="", base_date="", end_date="", simplify=TRUE)
 {
   url <- if(date != "" && period != ""){
-    paste0(url_active_zone_minutes, sprintf("%s/date/%s/%s.json", resource_path, format_date(date), period))
+    paste0(url_active_zone_minutes, sprintf("%s/date/%s/%s.json", format_date(date), period))
   } else if(base_date != "" & end_date != ""){
-    paste0(url_active_zone_minutes, sprintf("%s/date/%s/%s.json", resource_path, format_date(base_date), format_date(end_date)))
+    paste0(url_active_zone_minutes, sprintf("%s/date/%s/%s.json", format_date(base_date), format_date(end_date)))
   } else{
     stop("Error: Need to enter combination of date/period or base_date/end_date")
   }
